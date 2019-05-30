@@ -5,6 +5,7 @@
     mode: 0700
     owner: "{{ container_uid }}"
     state: directory
+  become: true
 - name: Check that /opt/send-docker/send-docker.key exists
   stat:
     path: /opt/send-docker/send-docker.key
