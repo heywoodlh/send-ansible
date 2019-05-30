@@ -10,10 +10,12 @@
   stat:
     path: /opt/send-docker/send-docker.key
   register: key_file_result
+  become: true
 - name: Check that /opt/send-docker/send-docker.crt exists
   stat:
     path: /opt/send-docker/send-docker.crt
   register: crt_file_result
+  become: true
 - name: generate openssl certificate if files don't exist
   shell: openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -keyout /opt/send-docker/send-docker.key -out /opt/send-docker/send-docker.crt -subj "{{ self_sign_ssl_options }}"
   become: true
