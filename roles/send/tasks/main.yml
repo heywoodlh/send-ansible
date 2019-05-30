@@ -9,3 +9,4 @@
     env:
       REDIS_HOST: "redis"
       NODE_ENV: "production"
+  become: true
