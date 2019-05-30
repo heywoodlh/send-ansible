@@ -22,13 +22,13 @@
   when: (key_file_result.stat.exists == False and crt_file_result.stat.exists == False)
 - name: change ownership of /opt/send-docker/send-docker.key to "{{ container_user }}"
   file:
-    path: /opt/send-docker/send-docker.csr
+    path: /opt/send-docker/send-docker.key
     owner: "{{ container_uid }}"
     mode: 0600
   become: true
-- name: change ownership of /opt/send-docker/send-docker.csr to "{{ container_user }}"
+- name: change ownership of /opt/send-docker/send-docker.crt to "{{ container_user }}"
   file:
-    path: /opt/send-docker/send-docker.csr
+    path: /opt/send-docker/send-docker.crt
     owner: "{{ container_uid }}"
     mode: 0600
   become: true
