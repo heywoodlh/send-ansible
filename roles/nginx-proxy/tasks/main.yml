@@ -60,5 +60,4 @@
     - /opt/send-docker/nginx.conf:/etc/nginx/nginx.conf
     - /opt/send-docker/send-docker.key:/opt/send-docker.key
     - /opt/send-docker/send-docker.crt:/opt/send-docker.crt
-    user: "{{ container_uid }}"
   become: true
