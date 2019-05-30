@@ -11,7 +11,7 @@
     name: "{{ redis_container_name }}"
     image: redis
     restart_policy: unless-stopped
-    user: "{{ container_user }}"
+    user: "{{ container_uid }}"
     volumes:
     - /opt/"{{ redis_container_name }}":/data
   become: true
