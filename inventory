@@ -1,0 +1,10 @@
+---
+send:
+  hosts:
+    192.168.1.5:
+  vars:
+    container_user: send_docker
+    container_uid: 1100
+    redis_container_name: send_redis
+    self_sign_ssl_options: "/C=US/ST=TX/L=Dallas/O=My Org/OU=My Group/CN=192.168.1.5"
+    send_hostname: 192.168.1.5

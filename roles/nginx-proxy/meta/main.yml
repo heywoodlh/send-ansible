@@ -1,0 +1,5 @@
+---
+dependencies:
+  - { role: docker-setup }
+  - { role: redis }
+  - { role: send }

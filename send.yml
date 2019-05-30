@@ -1,0 +1,7 @@
+---
+- hosts: all
+  roles:
+  - { role: docker-setup }
+  - { role: redis }
+  - { role: send }
+  - { role: nginx-proxy }
