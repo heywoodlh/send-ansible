@@ -5,7 +5,7 @@
     image: mozilla/send
     restart_policy: unless-stopped
     links:
-      - "{{ redis_container_name }}":redis
+    - "{{ redis_container_name }}:redis"
     env:
       REDIS_HOST: "redis"
       NODE_ENV: "production"
