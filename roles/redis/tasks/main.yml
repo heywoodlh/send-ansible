@@ -1,7 +1,7 @@
 ---
 - name: create send-docker redis directory
   file:
-    path: /opt/"{{ redis_container_name }}"
+    path: /opt/{{ redis_container_name }}
     mode: 0700
     owner: "{{ container_uid }}"
     state: directory
@@ -13,5 +13,5 @@
     restart_policy: unless-stopped
     user: "{{ container_uid }}"
     volumes:
-    - /opt/"{{ redis_container_name }}":/data
+    - /opt/{{ redis_container_name }}:/data
   become: true
